@@ -14,14 +14,23 @@ class OtpVerfication extends StatelessWidget {
           title: Text('OtpVerfication'),
         ),
         body: SafeArea(
-            child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.0.w),
-          child: Column(children: [
-            Image.asset(ImageRes.todo),
-            const Text('OtpVerfication'),
-            WhiteSpace(height: 26.h),
-            const Pinput(length: 6)
-          ]),
+            child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 30.w),
+          children: [
+            Column(children: [
+              Image.asset(ImageRes.todo),
+              const Text(
+                'Enter Verification Code',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 1, 3, 9)),
+              ),
+              WhiteSpace(height: 20.h),
+              const Pinput(length: 6)
+            ]),
+          ],
         )));
   }
 }
